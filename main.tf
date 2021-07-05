@@ -14,12 +14,3 @@ output "pets" {
   description = "Generated pets"
   value = [for i in random_pet.this: i.id]
 }
-
-terraform {
-  required_providers {
-    random = {
-      source = "hashicorp/random"
-      version = "3.0.0"
-    }
-  }
-}
